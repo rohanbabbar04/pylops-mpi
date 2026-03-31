@@ -486,11 +486,11 @@ function to provide fine-grain time measurements.</p>
 <span class="kn">from</span><span class="w"> </span><span class="nn">mpi4py</span><span class="w"> </span><span class="kn">import</span> <span class="n">MPI</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">pylops_mpi</span><span class="w"> </span><span class="kn">import</span> <span class="n">DistributedArray</span><span class="p">,</span> <span class="n">Partition</span>
 
-<a href="https://numpy.org/doc/stable/reference/random/generated/numpy.random.seed.html#numpy.random.seed" title="numpy.random.seed" class="sphx-glr-backref-module-numpy-random sphx-glr-backref-type-py-function"><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span></a><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
+<span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
 <a href="https://docs.python.org/3/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">rank</span></a> <span class="o">=</span> <a href="https://mpi4py.readthedocs.io/en/stable/reference/mpi4py.MPI.Comm.html#mpi4py.MPI.Comm.Get_rank" title="mpi4py.MPI.Comm.Get_rank" class="sphx-glr-backref-module-mpi4py-MPI sphx-glr-backref-type-py-method"><span class="n">MPI</span><span class="o">.</span><span class="n">COMM_WORLD</span><span class="o">.</span><span class="n">Get_rank</span></a><span class="p">()</span>
 
 <a href="https://docs.python.org/3/library/stdtypes.html#dict" title="builtins.dict" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">par</span></a> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;global_shape&#39;</span><span class="p">:</span> <span class="p">(</span><span class="mi">500</span><span class="p">,</span> <span class="mi">501</span><span class="p">),</span>
-       <span class="s1">&#39;partition&#39;</span><span class="p">:</span> <span class="n">Partition</span><span class="o">.</span><span class="n">SCATTER</span><span class="p">,</span> <span class="s1">&#39;dtype&#39;</span><span class="p">:</span> <a href="https://numpy.org/doc/stable/reference/arrays.scalars.html#numpy.float64" title="numpy.float64" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-attribute"><span class="n">np</span><span class="o">.</span><span class="n">float64</span></a><span class="p">,</span>
+       <span class="s1">&#39;partition&#39;</span><span class="p">:</span> <span class="n">Partition</span><span class="o">.</span><span class="n">SCATTER</span><span class="p">,</span> <span class="s1">&#39;dtype&#39;</span><span class="p">:</span> <a href="https://docs.python.org/3/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class"><span class="n">np</span><span class="o">.</span><span class="n">float64</span></a><span class="p">,</span>
        <span class="s1">&#39;axis&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">}</span>
 </pre></div>
 </div>
@@ -519,7 +519,7 @@ i.e., <code class="xref py py-func docutils literal notranslate"><span class="pr
   ncp.dot(x.local_array.flatten(), y.local_array.flatten()),
 /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/pylops_mpi/DistributedArray.py:660: RuntimeWarning: invalid value encountered in dot
   ncp.dot(x.local_array.flatten(), y.local_array.flatten()),
-[decorator]inner_func: total runtime: 0.002484 s
+[decorator]inner_func: total runtime: 0.002549 s
 </pre></div>
 </div>
 <p>We may want to get the fine-grained time measurements by timing the execution
@@ -541,9 +541,9 @@ measurement of the top-level function and those that comes from <a class="refere
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">inner_func_with_mark</span><span class="p">(</span><a href="https://docs.python.org/3/library/stdtypes.html#dict" title="builtins.dict" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">par</span></a><span class="p">)</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[decorator]inner_func_with_mark: total runtime: 0.000337 s
-        Begin array constructor--&gt;Begin dot: 0.000032 s
-        Begin dot--&gt;Finish dot: 0.000301 s
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[decorator]inner_func_with_mark: total runtime: 0.000400 s
+        Begin array constructor--&gt;Begin dot: 0.000031 s
+        Begin dot--&gt;Finish dot: 0.000365 s
 </pre></div>
 </div>
 <p>This utility benchmarking routines can also be nested. Let’s define
@@ -568,11 +568,11 @@ printed out with the nested indentation to specify that nested calls.</p>
   SumArray[:] = self.local_array + dist_array.local_array
 /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/pylops_mpi/DistributedArray.py:612: RuntimeWarning: invalid value encountered in add
   SumArray[:] = self.local_array + dist_array.local_array
-[decorator]outer_func_with_mark: total runtime: 0.000884 s
-        [decorator]inner_func_with_mark: total runtime: 0.000317 s
-                Begin array constructor--&gt;Begin dot: 0.000024 s
-                Begin dot--&gt;Finish dot: 0.000291 s
-        Outer func start--&gt;Outer func ends: 0.000880 s
+[decorator]outer_func_with_mark: total runtime: 0.001059 s
+        [decorator]inner_func_with_mark: total runtime: 0.000363 s
+                Begin array constructor--&gt;Begin dot: 0.000021 s
+                Begin dot--&gt;Finish dot: 0.000339 s
+        Outer func start--&gt;Outer func ends: 0.001056 s
 </pre></div>
 </div>
 <p>In some cases, we may want to write benchmark output to a text file.
