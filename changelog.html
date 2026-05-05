@@ -472,6 +472,18 @@
                   
   <section id="changelog">
 <span id="id1"></span><h1>Changelog<a class="headerlink" href="#changelog" title="Link to this heading">#</a></h1>
+<section id="version-0-6-0">
+<h2>Version 0.6.0<a class="headerlink" href="#version-0-6-0" title="Link to this heading">#</a></h2>
+<p><em>Released on: 29/04/2026</em></p>
+<ul class="simple">
+<li><p>Introduced <code class="xref py py-func docutils literal notranslate"><span class="pre">pylops_mpi.optimization.eigs.power_iteration</span></code> to estimate the maximum eigenvalue.</p></li>
+<li><p>Added <a class="reference internal" href="api/generated/pylops_mpi.optimization.sparsity.ista.html#pylops_mpi.optimization.sparsity.ista" title="pylops_mpi.optimization.sparsity.ista"><code class="xref py py-func docutils literal notranslate"><span class="pre">pylops_mpi.optimization.sparsity.ista</span></code></a> and the corresponding <a class="reference internal" href="api/generated/pylops_mpi.optimization.cls_sparsity.ISTA.html#pylops_mpi.optimization.cls_sparsity.ISTA" title="pylops_mpi.optimization.cls_sparsity.ISTA"><code class="xref py py-class docutils literal notranslate"><span class="pre">pylops_mpi.optimization.cls_sparsity.ISTA</span></code></a> class, an iterative shrinkage-thresholding algorithm.</p></li>
+<li><p>Added <a class="reference internal" href="api/generated/pylops_mpi.optimization.sparsity.fista.html#pylops_mpi.optimization.sparsity.fista" title="pylops_mpi.optimization.sparsity.fista"><code class="xref py py-func docutils literal notranslate"><span class="pre">pylops_mpi.optimization.sparsity.fista</span></code></a> and the corresponding <a class="reference internal" href="api/generated/pylops_mpi.optimization.cls_sparsity.FISTA.html#pylops_mpi.optimization.cls_sparsity.FISTA" title="pylops_mpi.optimization.cls_sparsity.FISTA"><code class="xref py py-class docutils literal notranslate"><span class="pre">pylops_mpi.optimization.cls_sparsity.FISTA</span></code></a> class, a fast variant of ISTA.</p></li>
+<li><p>Included tutorial: “Reflectivity Inversion - 3D”, with separate implementations for base, CuPy, and NCCL.</p></li>
+<li><p>Added <cite>empty_like</cite> function to <a class="reference internal" href="api/generated/pylops_mpi.DistributedArray.html#pylops_mpi.DistributedArray" title="pylops_mpi.DistributedArray"><code class="xref py py-class docutils literal notranslate"><span class="pre">pylops_mpi.DistributedArray</span></code></a> and <a class="reference internal" href="api/generated/pylops_mpi.StackedDistributedArray.html#pylops_mpi.StackedDistributedArray" title="pylops_mpi.StackedDistributedArray"><code class="xref py py-class docutils literal notranslate"><span class="pre">pylops_mpi.StackedDistributedArray</span></code></a>.</p></li>
+<li><p>Introduced a <cite>vdot</cite> parameter in the <cite>dot</cite> method of <a class="reference internal" href="api/generated/pylops_mpi.DistributedArray.html#pylops_mpi.DistributedArray" title="pylops_mpi.DistributedArray"><code class="xref py py-class docutils literal notranslate"><span class="pre">pylops_mpi.DistributedArray</span></code></a> and <a class="reference internal" href="api/generated/pylops_mpi.StackedDistributedArray.html#pylops_mpi.StackedDistributedArray" title="pylops_mpi.StackedDistributedArray"><code class="xref py py-class docutils literal notranslate"><span class="pre">pylops_mpi.StackedDistributedArray</span></code></a> to support vector dot products.</p></li>
+</ul>
+</section>
 <section id="version-0-5-0">
 <h2>Version 0.5.0<a class="headerlink" href="#version-0-5-0" title="Link to this heading">#</a></h2>
 <p><em>Released on: 28/03/2026</em></p>
@@ -599,6 +611,7 @@ for NCCL communication backend.</p></li>
   </div>
   <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#version-0-6-0">Version 0.6.0</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#version-0-5-0">Version 0.5.0</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#version-0-4-0">Version 0.4.0</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#version-0-3-0">Version 0.3.0</a></li>
