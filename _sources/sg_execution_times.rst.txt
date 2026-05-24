@@ -6,7 +6,7 @@
 
 Computation times
 =================
-**03:11.070** total execution time for 14 files **from all galleries**:
+**03:11.814** total execution time for 14 files **from all galleries**:
 
 .. container::
 
@@ -33,44 +33,44 @@ Computation times
      - Time
      - Mem (MB)
    * - :ref:`sphx_glr_tutorials_poststack.py` (``../../tutorials/poststack.py``)
-     - 02:01.253
+     - 02:02.705
      - 0.0
    * - :ref:`sphx_glr_tutorials_reflectivity.py` (``../../tutorials/reflectivity.py``)
-     - 00:55.626
+     - 00:54.415
      - 0.0
    * - :ref:`sphx_glr_tutorials_mdd.py` (``../../tutorials/mdd.py``)
-     - 00:07.832
+     - 00:08.070
      - 0.0
    * - :ref:`sphx_glr_tutorials_lsm.py` (``../../tutorials/lsm.py``)
-     - 00:02.908
+     - 00:03.029
      - 0.0
    * - :ref:`sphx_glr_gallery_plot_distributed_array.py` (``../../examples/plot_distributed_array.py``)
-     - 00:01.167
+     - 00:01.220
      - 0.0
    * - :ref:`sphx_glr_gallery_plot_derivative.py` (``../../examples/plot_derivative.py``)
-     - 00:01.019
+     - 00:01.068
      - 0.0
    * - :ref:`sphx_glr_gallery_plot_mdc.py` (``../../examples/plot_mdc.py``)
-     - 00:00.438
+     - 00:00.448
      - 0.0
    * - :ref:`sphx_glr_gallery_plot_stacking.py` (``../../examples/plot_stacking.py``)
-     - 00:00.358
+     - 00:00.373
      - 0.0
    * - :ref:`sphx_glr_gallery_plot_mpilinop.py` (``../../examples/plot_mpilinop.py``)
-     - 00:00.285
+     - 00:00.296
      - 0.0
    * - :ref:`sphx_glr_gallery_plot_cgls.py` (``../../examples/plot_cgls.py``)
-     - 00:00.152
+     - 00:00.157
      - 0.0
    * - :ref:`sphx_glr_gallery_plot_stacked_array.py` (``../../examples/plot_stacked_array.py``)
      - 00:00.016
      - 0.0
    * - :ref:`sphx_glr_tutorials_benchmarking.py` (``../../tutorials/benchmarking.py``)
-     - 00:00.007
-     - 0.0
-   * - :ref:`sphx_glr_gallery_plot_summamatrixmult.py` (``../../examples/plot_summamatrixmult.py``)
-     - 00:00.004
+     - 00:00.008
      - 0.0
    * - :ref:`sphx_glr_gallery_plot_matrixmult.py` (``../../examples/plot_matrixmult.py``)
+     - 00:00.004
+     - 0.0
+   * - :ref:`sphx_glr_gallery_plot_summamatrixmult.py` (``../../examples/plot_summamatrixmult.py``)
      - 00:00.004
      - 0.0
