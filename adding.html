@@ -540,6 +540,12 @@ while the <code class="docutils literal notranslate"><span class="pre">base_comm
     <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="n">shape</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">dtype</span><span class="p">,</span> <span class="n">base_comm</span><span class="o">=</span><span class="n">base_comm</span><span class="p">)</span>
 </pre></div>
 </div>
+<p>Every <a class="reference internal" href="api/generated/pylops_mpi.MPILinearOperator.html#pylops_mpi.MPILinearOperator" title="pylops_mpi.MPILinearOperator"><code class="xref py py-class docutils literal notranslate"><span class="pre">pylops_mpi.MPILinearOperator</span></code></a> class is equipped with <code class="docutils literal notranslate"><span class="pre">dims</span></code> and <code class="docutils literal notranslate"><span class="pre">dimsd</span></code>, in
+addition to the required <code class="docutils literal notranslate"><span class="pre">dtype</span></code>, <code class="docutils literal notranslate"><span class="pre">shape</span></code>, and <code class="docutils literal notranslate"><span class="pre">base_comm</span></code>. Note that <code class="docutils literal notranslate"><span class="pre">dims</span></code> and <code class="docutils literal notranslate"><span class="pre">dimsd</span></code> can
+be defined independently of <code class="docutils literal notranslate"><span class="pre">shape</span></code>, which will then be automatically assigned within the
+<code class="docutils literal notranslate"><span class="pre">super</span></code> method.</p>
+<p>See the docs of <a class="reference internal" href="api/generated/pylops_mpi.MPILinearOperator.html#pylops_mpi.MPILinearOperator" title="pylops_mpi.MPILinearOperator"><code class="xref py py-class docutils literal notranslate"><span class="pre">pylops_mpi.MPILinearOperator</span></code></a> for more information about what these
+attributes mean.</p>
 </section>
 <section id="forward-mode-matvec">
 <h3>Forward mode (<code class="docutils literal notranslate"><span class="pre">_matvec</span></code>)<a class="headerlink" href="#forward-mode-matvec" title="Link to this heading">#</a></h3>
