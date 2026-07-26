@@ -555,7 +555,7 @@
 <h1>pylops_mpi.DistributedArray<a class="headerlink" href="#pylops-mpi-distributedarray" title="Link to this heading">#</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="pylops_mpi.DistributedArray">
-<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">pylops_mpi.</span></span><span class="sig-name descname"><span class="pre">DistributedArray</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">global_shape</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">base_comm</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">&lt;mpi4py.MPI.Intracomm</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">base_comm_nccl</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">partition</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">Partition.SCATTER</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">local_shapes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mask</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">engine</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'numpy'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dtype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">&lt;class</span> <span class="pre">'numpy.float64'&gt;</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pylops_mpi/DistributedArray.html#DistributedArray"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pylops_mpi.DistributedArray" title="Link to this definition">#</a></dt>
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">pylops_mpi.</span></span><span class="sig-name descname"><span class="pre">DistributedArray</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">global_shape</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">base_comm</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">&lt;mpi4py.MPI.Intracomm</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">base_comm_nccl</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">partition</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">Partition.SCATTER</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">local_array</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">local_shapes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mask</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">engine</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'numpy'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dtype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">&lt;class</span> <span class="pre">'numpy.float64'&gt;</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pylops_mpi/DistributedArray.html#DistributedArray"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pylops_mpi.DistributedArray" title="Link to this definition">#</a></dt>
 <dd><p>Distributed Numpy Arrays</p>
 <p>Multidimensional NumPy-like distributed arrays.
 It brings NumPy arrays to high-performance computing.</p>
@@ -587,6 +587,12 @@ Communicator is provided, the base_comm will be set to MPI.COMM_WORLD.</p>
 </dd>
 <dt><strong>axis</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>, optional</span></dt><dd><p>Axis along which distribution occurs. Defaults to <code class="docutils literal notranslate"><span class="pre">0</span></code>.</p>
 </dd>
+<dt><strong>local_array</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.5)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">numpy.ndarray</span></code></a> or <code class="xref py py-obj docutils literal notranslate"><span class="pre">cupy.ndarray</span></code>, optional</span></dt><dd><p>Existing local array to use as the underlying storage instead of
+allocating a new one. Its shape must match the expected local shape
+for the current rank. When provided, the local array’s dtype and engine
+(numpy or cupy) are used, and the <code class="docutils literal notranslate"><span class="pre">dtype</span></code> and <code class="docutils literal notranslate"><span class="pre">engine</span></code> arguments
+are ignored.</p>
+</dd>
 <dt><strong>local_shapes</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a>, optional</span></dt><dd><p>List of tuples or integers representing local shapes at each rank.</p>
 </dd>
 <dt><strong>mask</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a>, optional</span></dt><dd><p>Mask defining subsets of ranks to consider when performing ‘global’
@@ -595,6 +601,20 @@ operations on the distributed array such as dot product or norm.</p>
 <dt><strong>engine</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a>, optional</span></dt><dd><p>Engine used to store array (<code class="docutils literal notranslate"><span class="pre">numpy</span></code> or <code class="docutils literal notranslate"><span class="pre">cupy</span></code>)</p>
 </dd>
 <dt><strong>dtype</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a>, optional</span></dt><dd><p>Type of elements in input array. Defaults to <code class="docutils literal notranslate"><span class="pre">numpy.float64</span></code>.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt>IndexError</dt><dd><p>If <code class="docutils literal notranslate"><span class="pre">axis</span></code> is out of bounds for <code class="docutils literal notranslate"><span class="pre">global_shape</span></code>.</p>
+</dd>
+<dt>ValueError</dt><dd><p>If <code class="docutils literal notranslate"><span class="pre">partition</span></code> is not one of <code class="xref py py-obj docutils literal notranslate"><span class="pre">Partition.BROADCAST</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">Partition.UNSAFE_BROADCAST</span></code>, or
+<code class="xref py py-obj docutils literal notranslate"><span class="pre">Partition.SCATTER</span></code>.</p>
+</dd>
+<dt>ValueError</dt><dd><p>If <code class="docutils literal notranslate"><span class="pre">base_comm_nccl</span></code> is provided while <code class="docutils literal notranslate"><span class="pre">engine</span></code> is not <code class="docutils literal notranslate"><span class="pre">&quot;cupy&quot;</span></code>.</p>
+</dd>
+<dt>ValueError</dt><dd><p>If <code class="docutils literal notranslate"><span class="pre">local_array</span></code> is provided and its shape does not match the
+expected local shape for the current rank.</p>
 </dd>
 </dl>
 </dd>
@@ -641,10 +661,13 @@ operations on the distributed array such as dot product or norm.</p>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">redistribute</span></code>(axis)</p></td>
 <td><p>Redistribute the array along the specified axis.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_dist</span></code>(x[, base_comm, base_comm_nccl, ...])</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">reshape</span></code>(local_shape[, axis])</p></td>
+<td><p>Return a reshaped DistributedArray</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_dist</span></code>(x[, base_comm, base_comm_nccl, ...])</p></td>
 <td><p>Convert A Global Array to a Distributed Array</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">zeros_like</span></code>()</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">zeros_like</span></code>()</p></td>
 <td><p>Creates a copy of the DistributedArray filled with zeros</p></td>
 </tr>
 </tbody>
