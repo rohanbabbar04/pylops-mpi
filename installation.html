@@ -31,8 +31,8 @@
   </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=90905a2f556bf617f1a9" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=90905a2f556bf617f1a9" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=cb8930eaaf36d9849b67" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=cb8930eaaf36d9849b67" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
     <link rel="stylesheet" type="text/css" href="_static/plot_directive.css" />
@@ -44,10 +44,10 @@
     <link rel="stylesheet" type="text/css" href="_static/css/custom.css?v=e45f66c9" />
   
   <!-- So that users can add custom icons -->
-  <script defer src="_static/scripts/fontawesome.js?digest=90905a2f556bf617f1a9"></script>
+  <script defer src="_static/scripts/fontawesome.js?digest=cb8930eaaf36d9849b67"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=90905a2f556bf617f1a9" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=90905a2f556bf617f1a9" />
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=cb8930eaaf36d9849b67" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=cb8930eaaf36d9849b67" />
 
     <script src="_static/documentation_options.js?v=5929fcd5"></script>
     <script src="_static/doctools.js?v=fd6eb6e6"></script>
@@ -678,6 +678,19 @@ Run the following command to add the PyLops-MPI repo as a remote named <em>upstr
 </pre></div>
 </div>
 </section>
+<section id="install-pre-commit-hooks">
+<h3>Install pre-commit hooks<a class="headerlink" href="#install-pre-commit-hooks" title="Link to this heading">#</a></h3>
+<p>To ensure consistency in the coding style of our developers we rely on
+<a class="reference external" href="https://pre-commit.com">pre-commit</a> to perform a series of checks when you are
+ready to commit and push some changes. This is accomplished by means of git hooks
+that have been configured in the <code class="docutils literal notranslate"><span class="pre">.pre-commit-config.yaml</span></code> file.</p>
+<p>In order to setup such hooks in your local repository, run:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>&gt;&gt;<span class="w"> </span>pre-commit<span class="w"> </span>install
+</pre></div>
+</div>
+<p>Once this is set up, when committing changes, <code class="docutils literal notranslate"><span class="pre">pre-commit</span></code> will reject and “fix” your code by running the proper hooks.
+At this point, the user must check the changes and then stage them before trying to commit again.</p>
+</section>
 <section id="final-steps">
 <h3>Final steps<a class="headerlink" href="#final-steps" title="Link to this heading">#</a></h3>
 <p>PyLops-MPI does not enforce the use of a linter as a pre-commit hook, but we do highly encourage using one before submitting a Pull Request.
@@ -765,6 +778,7 @@ Apart from ensuring that docstrings are properly formatted, they can aid in catc
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#run-tests">Run tests</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#run-examples-and-tutorials">Run examples and tutorials</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#add-remote-optional">Add remote (optional)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#install-pre-commit-hooks">Install pre-commit hooks</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#final-steps">Final steps</a></li>
 </ul>
 </li>
@@ -784,8 +798,8 @@ Apart from ensuring that docstrings are properly formatted, they can aid in catc
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="_static/scripts/bootstrap.js?digest=90905a2f556bf617f1a9"></script>
-<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=90905a2f556bf617f1a9"></script>
+  <script defer src="_static/scripts/bootstrap.js?digest=cb8930eaaf36d9849b67"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=cb8930eaaf36d9849b67"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -819,7 +833,7 @@ Apart from ensuring that docstrings are properly formatted, they can aid in catc
         <div class="footer-item">
 <p class="theme-version">
   <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.20.0.
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.21.0.
 </p></div>
       
     </div>
