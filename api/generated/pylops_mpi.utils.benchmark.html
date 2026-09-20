@@ -37,7 +37,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
     <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/style.css?v=e5b2244c" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery.css?v=fd6457a4" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery.css?v=c83e6b79" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-binder.css?v=f4aeca0c" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-dataframe.css?v=2082cf3c" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-rendered-html.css?v=1277b6f3" />
@@ -468,6 +468,7 @@
 </ul>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="pylops_mpi.proximal.proximal.MPIL2.html">pylops_mpi.proximal.proximal.MPIL2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pylops_mpi.proximal.proximal.MPIL21.html">pylops_mpi.proximal.proximal.MPIL21</a></li>
 </ul>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="pylops_mpi.optimization.cls_basic.CG.html">pylops_mpi.optimization.cls_basic.CG</a></li>
@@ -576,9 +577,9 @@ The user-facing mark() will always call the function at the top of the _mark_fun
 <dl class="field-list">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl>
-<dt><strong>func</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#callable" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">callable</span></code></a>, optional</span></dt><dd><p>Function to be decorated. Defaults to <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
+<dt><strong>func</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/builtins/functions.html#callable" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">callable</span></code></a>, optional</span></dt><dd><p>Function to be decorated. Defaults to <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
 </dd>
-<dt><strong>description</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a>, optional</span></dt><dd><p>Description for the output text. Defaults to <code class="docutils literal notranslate"><span class="pre">''</span></code>.</p>
+<dt><strong>description</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/builtins/stdtypes.html#str" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a>, optional</span></dt><dd><p>Description for the output text. Defaults to <code class="docutils literal notranslate"><span class="pre">''</span></code>.</p>
 </dd>
 <dt><strong>logger: :obj:`logging.Logger`, optional</strong></dt><dd><p>A <cite>logging.Logger</cite> object for logging the benchmark text output. This logger must be setup before
 passing to this function to either writing output to a file or log to stdout. If <cite>logger</cite>
@@ -591,7 +592,7 @@ is not provided, the output is printed to stdout.</p>
 
 <section id="examples-using-pylops-mpi-utils-benchmark">
 <h2>Examples using <code class="docutils literal notranslate"><span class="pre">pylops_mpi.utils.benchmark</span></code><a class="headerlink" href="#examples-using-pylops-mpi-utils-benchmark" title="Link to this heading">#</a></h2>
-<div class="sphx-glr-thumbnails"><div class="sphx-glr-thumbcontainer" tooltip=":pypylops_mpi.utils.benchmark is a decorator used to decorate any function to measure its execution time from start to finish :pypylops_mpi.utils.mark is a function used inside the benchmark-decorated function to provide fine-grain time measurements."><img alt="" src="../../_images/sphx_glr_benchmarking_thumb.png" />
+<div class="sphx-glr-thumbnails"><div class="sphx-glr-thumbcontainer" tooltip="pylops_mpi.utils.benchmark is a decorator used to decorate any function to measure its execution time from start to finish pylops_mpi.utils.mark is a function used inside the benchmark-decorated function to provide fine-grain time measurements."><img alt="" src="../../_images/sphx_glr_benchmarking_thumb.png" />
 <p><a class="reference internal" href="../../tutorials/benchmarking.html"><span class="doc">Benchmark Utility in PyLops-MPI</span></a></p>
   <div class="sphx-glr-thumbnail-title">Benchmark Utility in PyLops-MPI</div>
 </div></div><div style='clear:both'></div></section>

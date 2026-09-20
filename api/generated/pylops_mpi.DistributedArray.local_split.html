@@ -37,7 +37,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
     <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/style.css?v=e5b2244c" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery.css?v=fd6457a4" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery.css?v=c83e6b79" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-binder.css?v=f4aeca0c" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-dataframe.css?v=2082cf3c" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-rendered-html.css?v=1277b6f3" />
@@ -468,6 +468,7 @@
 </ul>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="pylops_mpi.proximal.proximal.MPIL2.html">pylops_mpi.proximal.proximal.MPIL2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pylops_mpi.proximal.proximal.MPIL21.html">pylops_mpi.proximal.proximal.MPIL21</a></li>
 </ul>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="pylops_mpi.optimization.cls_basic.CG.html">pylops_mpi.optimization.cls_basic.CG</a></li>
@@ -570,19 +571,19 @@
 <dl class="field-list">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl>
-<dt><strong>global_shape</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">tuple</span></code></a></span></dt><dd><p>Shape of the global array.</p>
+<dt><strong>global_shape</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/builtins/stdtypes.html#tuple" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">tuple</span></code></a></span></dt><dd><p>Shape of the global array.</p>
 </dd>
 <dt><strong>base_comm</strong><span class="classifier"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MPI.Comm</span></code></span></dt><dd><p>Base MPI Communicator.</p>
 </dd>
 <dt><strong>partition</strong><span class="classifier"><a class="reference internal" href="pylops_mpi.Partition.html#pylops_mpi.Partition" title="pylops_mpi.DistributedArray.Partition"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Partition</span></code></a></span></dt><dd><p>Type of partition.</p>
 </dd>
-<dt><strong>axis</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></span></dt><dd><p>Axis of distribution</p>
+<dt><strong>axis</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/builtins/functions.html#int" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></span></dt><dd><p>Axis of distribution</p>
 </dd>
 </dl>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><dl>
-<dt><strong>local_shape</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">tuple</span></code></a></span></dt><dd><p>Shape of the local array.</p>
+<dt><strong>local_shape</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/builtins/stdtypes.html#tuple" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">tuple</span></code></a></span></dt><dd><p>Shape of the local array.</p>
 </dd>
 </dl>
 </dd>
@@ -597,7 +598,7 @@
 </div><div class="sphx-glr-thumbcontainer" tooltip="Multi-Dimensional Convolution"><img alt="" src="../../_images/sphx_glr_plot_mdc_thumb.png" />
 <p><a class="reference internal" href="../../gallery/plot_mdc.html"><span class="doc">Multi-Dimensional Convolution</span></a></p>
   <div class="sphx-glr-thumbnail-title">Multi-Dimensional Convolution</div>
-</div><div class="sphx-glr-thumbcontainer" tooltip="More precisely, compared to its counterpart in the PyLops documentation, this example distributes the frequency slices of the kernel of the MDC operator across multiple processes. Whilst both the entire model and data sit on all processes, within the MDC operator, and more precisely when the :pypylops_mpi.signalprocessing.Fredholm1 is called, different groups of frequencies are processed by the different ranks."><img alt="" src="../../_images/sphx_glr_mdd_thumb.png" />
+</div><div class="sphx-glr-thumbcontainer" tooltip="More precisely, compared to its counterpart in the PyLops documentation, this example distributes the frequency slices of the kernel of the MDC operator across multiple processes. Whilst both the entire model and data sit on all processes, within the MDC operator, and more precisely when the pylops_mpi.signalprocessing.Fredholm1 is called, different groups of frequencies are processed by the different ranks."><img alt="" src="../../_images/sphx_glr_mdd_thumb.png" />
 <p><a class="reference internal" href="../../tutorials/mdd.html"><span class="doc">Multi-Dimensional Deconvolution</span></a></p>
   <div class="sphx-glr-thumbnail-title">Multi-Dimensional Deconvolution</div>
 </div></div><div style='clear:both'></div></section>
