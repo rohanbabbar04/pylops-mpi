@@ -104,9 +104,11 @@ i.e., :py:func:`@benchmark(description="printout_name")`
 
  .. code-block:: none
 
-    /opt/hostedtoolcache/Python/3.11.17/x64/lib/python3.11/site-packages/pylops_mpi/DistributedArray.py:836: RuntimeWarning: invalid value encountered in dot
+    /opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/pylops_mpi/DistributedArray.py:836: RuntimeWarning: overflow encountered in dot
       dot_func(x.local_array.flatten(), y.local_array.flatten()),
-    [decorator]inner_func: total runtime: 0.000993 s
+    /opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/pylops_mpi/DistributedArray.py:836: RuntimeWarning: invalid value encountered in dot
+      dot_func(x.local_array.flatten(), y.local_array.flatten()),
+    [decorator]inner_func: total runtime: 0.000999 s
 
 
 
@@ -161,9 +163,9 @@ measurement of the top-level function and those that comes from :py:func:`pylops
 
  .. code-block:: none
 
-    [decorator]inner_func_with_mark: total runtime: 0.000398 s
-            Begin array constructor-->Begin dot: 0.000023 s
-            Begin dot-->Finish dot: 0.000372 s
+    [decorator]inner_func_with_mark: total runtime: 0.000338 s
+            Begin array constructor-->Begin dot: 0.000025 s
+            Begin dot-->Finish dot: 0.000309 s
 
 
 
@@ -218,15 +220,15 @@ printed out with the nested indentation to specify that nested calls.
 
  .. code-block:: none
 
-    /opt/hostedtoolcache/Python/3.11.17/x64/lib/python3.11/site-packages/pylops_mpi/DistributedArray.py:748: RuntimeWarning: overflow encountered in add
+    /opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/pylops_mpi/DistributedArray.py:748: RuntimeWarning: overflow encountered in add
       SumArray[:] = self.local_array + dist_array.local_array
-    /opt/hostedtoolcache/Python/3.11.17/x64/lib/python3.11/site-packages/pylops_mpi/DistributedArray.py:748: RuntimeWarning: invalid value encountered in add
+    /opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/pylops_mpi/DistributedArray.py:748: RuntimeWarning: invalid value encountered in add
       SumArray[:] = self.local_array + dist_array.local_array
-    [decorator]outer_func_with_mark: total runtime: 0.001031 s
-            [decorator]inner_func_with_mark: total runtime: 0.000417 s
-                    Begin array constructor-->Begin dot: 0.000018 s
-                    Begin dot-->Finish dot: 0.000396 s
-            Outer func start-->Outer func ends: 0.001028 s
+    [decorator]outer_func_with_mark: total runtime: 0.000851 s
+            [decorator]inner_func_with_mark: total runtime: 0.000307 s
+                    Begin array constructor-->Begin dot: 0.000021 s
+                    Begin dot-->Finish dot: 0.000283 s
+            Outer func start-->Outer func ends: 0.000848 s
 
 
 
